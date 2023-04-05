@@ -5,10 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
-    <button id="testbtn1">Test 1</button>
-    <pre id="test1result"></pre>
+    <div>
+      <header>
+          <h1>Website Name</h1>
+      </header>
+  </div>
+
+  <div>
+      <div>
+          <h2>Music You Love</h2>
+      </div>
+      <div>
+          <nav>
+              <ul>
+                  <li><a href="#tickets">My Tickets</a></li>
+                  <li><a href="#sell">Sell</a></li>
+                  <li><a href="#contact">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+
+       <div>
+            <form>
+              <div class="form-group">
+                <div class="input-group">
+                  <label for="search-location" class="form-label"></label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input-control" id="search-location" placeholder="Location" required>
+                    <img class="img-style" src="./images/icons/location.gif" alt="" width="30" height="30">
+                  </div>
+                </div>
+      
+                <div class="input-group">
+                  <label for="distance" class="form-label"></label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input-control" id="distance" placeholder="Distance" required>
+                    <img class="img-style" src="./images/icons/distance.png" alt="" width="30" height="30">
+                  </div>
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <select id="genre" class="input-control" required>
+                  <option value="" selected disabled>Genre</option>
+                  <option value="rock">Rock</option>
+                  <option value="pop">Pop</option>
+                  <option value="hip-hop">Hip-Hop</option>
+                  <option value="jazz">Jazz</option>
+                  <option value="blues">Blues</option>
+                  <option value="country">Country</option>
+                  <option value="reggae">Reggae</option>
+                  <option value="classical">Classical</option>
+                </select>
+                <img class="img-style" src="./images/icons/musical.png" alt="image of disk playing in green color"
+                  width="30" height="30">
+      
+                <button type="submit">Search</button>
+                <img src="./images/" alt="">
+              </div>
+            </form>
+          </div>
+    <script src="./assets/js/mainSpotify.js"></script>
     <script src="./assets/js/mainTicketmaster.js"></script>
+    
   </body>
 </html>
