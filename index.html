@@ -1,90 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
     <div>
-      <header>
-          <h1>Website Name</h1>
-      </header>
-  </div>
+        <header>
+            <h1>Website Name</h1>
+        </header>
+    </div>
 
-  <div>
-      <div>
-          <h2>Music You Love</h2>
-      </div>
-      <div class ="nav-bar">
-          <nav>
-            <ul>
-              <li class="dropdown">
-                <a href="#tickets" class="dropbtn">Tickets</a>
-                <div class="dropdown-content">
-                  <a href="#"> Orders</a>
-                </div>
-              </li>
-    
-              <li class="dropdown">
-                <a href="#sell" class="dropbtn">Sell</a>
-                <div class="dropdown-content">
-                  <a href="#">My Tickets</a>
-                </div>
-              </li>
-    
-              <li>
-                <a href="#contact" id="contact-link">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-      </div>
+    <div>
+        <div>
+            <h2>Music You Love</h2>
+        </div>
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#tickets" class="dropbtn">Tickets</a>
+                        <div class="dropdown-content">
+                            <a href="#"> Orders</a>
+                        </div>
+                    </li>
 
-       <div>
+                    <li class="dropdown">
+                        <a href="#sell" class="dropbtn">Sell</a>
+                        <div class="dropdown-content">
+                            <a href="#">My Tickets</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#contact" id="contact-link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
             <form>
-              <div class="form-group">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="distance" class="form-label"></label>
+                        <div class="input-wrapper">
+                            <input type="text input is-normal" class="input-control" id="date" placeholder="Date"
+                                required>
+                            <img class="img-style" src="" alt="" width="30" height="30">
+                        </div>
+                    </div>
+                </div>
                 <div class="input-group">
-                  <label for="distance" class="form-label"></label>
-                  <div class="input-wrapper">
-                    <input type="text input is-normal" class="input-control" id="date" placeholder="Date" required>
-                    <img class="img-style" src="" alt="" width="30" height="30">
-                  </div>
+                    <label for="search-location" class="form-label"></label>
+                    <div class="input-wrapper">
+                        <input type="text" class="input-control input is-normal is-rounded" id="search-location"
+                            placeholder="Location" required>
+                        <img class="img-style" src="./images/icons/location.gif" alt="location icon" width="30"
+                            height="30">
+                    </div>
                 </div>
-              </div>
+
                 <div class="input-group">
-                  <label for="search-location" class="form-label"></label>
-                  <div class="input-wrapper">
-                    <input type="text" class="input-control input is-normal is-rounded" id="search-location" placeholder="Location" required>
-                    <img class="img-style" src="./images/icons/location.gif" alt="location icon" width="30" height="30">
-                  </div>
+                    <label for="distance" class="form-label"></label>
+                    <div class="input-wrapper">
+                        <input type="text" class="input-control input is-normal" id="distance" placeholder="Distance"
+                            required>
+                        <img class="img-style" src="./images/icons/distance.png" alt="distance icon" width="30"
+                            height="30">
+                    </div>
                 </div>
-      
-                <div class="input-group">
-                  <label for="distance" class="form-label"></label>
-                  <div class="input-wrapper">
-                    <input type="text" class="input-control input is-normal" id="distance" placeholder="Distance" required>
-                    <img class="img-style" src="./images/icons/distance.png" alt="distance icon" width="30" height="30">
-                  </div>
-                </div>
-              </div>
-              <div class="input-group">
-                <label for="genre" class="form-label"></label>
-                <div class="input-wrapper">
-                  <input type="text" class="input-control input is-normal is-rounded" id="genre" placeholder="Genre" required>
-                  <img class = "img-style" src="./images/icons/musical" alt="genre icon"width="30" height="30">
-                </div>
-              </div>
+        </div>
+        <div class="input-group">
+            <label for="genre" class="form-label"></label>
+            <div class="input-wrapper">
+                <input type="text" class="input-control input is-normal is-rounded" id="genre" placeholder="Genre"
+                    required>
+                <img class="img-style" src="./images/icons/musical" alt="genre icon" width="30" height="30">
             </div>
-             
-                <button type="submit">Search</button>
-                <img src="./images/learning" alt="search icon">
-              </div>
-            </form>
-          </div>
+        </div>
+    </div>
+
+    <button type="submit">Search</button>
+    <img src="./images/learning" alt="search icon">
+    </div>
+    </form>
+    </div>
+
+    <div id="results"></div>
+
     <script src="./assets/js/mainSpotify.js"></script>
     <script src="./assets/js/mainTicketmaster.js"></script>
-    
-  </body>
+
+</body>
+
 </html>
