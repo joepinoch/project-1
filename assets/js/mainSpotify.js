@@ -59,8 +59,8 @@ setInterval(getToken, 3600000)
 
 
 
-async function exampleSpotifyCall() {
-    const response = await fetch(`https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb`, {
+async function exampleSpotifyCall(genre) {
+    const response = await fetch(`https://api.spotify.com/v1/search?query=genre%3A${genre}&type=track&market=US&locale=en-US%2Cen%3Bq%3D0.9&offset=0&limit=10`, {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`
@@ -72,7 +72,6 @@ async function exampleSpotifyCall() {
 // exampleSpotifyCall();
 
 setTimeout(exampleSpotifyCall, 5000);
-
 
 // {
 //     "href": "https://api.spotify.com/v1/me/shows?offset=0&limit=20",

@@ -12,10 +12,10 @@ $(document).ready(function () {
     var date = document.getElementById("date").value;
     console.log(date);
     var distance = document.getElementById("distance").value;
-
+    exampleSpotifyCall(genre);
     $.ajax({
       type: "GET",
-      url: `https://app.ticketmaster.com/discovery/v2/events.json?size=10&postalCode=${Searchlocation}&classificationName=[music,${genre}]&radius=${distance}&apikey=fRxWNBut35gtcCbvmA6gavOYvhqsLzKQ`,
+      url: `https://app.ticketmaster.com/discovery/v2/events.json?size=10&radius=${distance}&postalCode=${Searchlocation}&classificationName=[music,${genre}]&apikey=fRxWNBut35gtcCbvmA6gavOYvhqsLzKQ`,
       async: true,
       dataType: "json",
       success: function (json) {
