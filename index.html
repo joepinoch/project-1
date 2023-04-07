@@ -2,109 +2,213 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Project 1 </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/teststyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Document</title>
 </head>
 
 <body>
-  <div>
-    <header>
-      <h1>Website Name</h1>
-    </header>
-  </div>
-
-  <div>
     <div>
-      <h2>Music that speaks to your heart!!</h2>
+        <h1>Website Name</h1>
+        <h2>Where Music touches your soul</h2>
     </div>
+    <div>
+        <div class="navbar-1">
+            <nav>
+                <ul>
+                    <li class="nv-dropdown">
+                        <a href="#signup">SignUp</a>
+                        <div class="nv-dropdown-content">
+                            <form id="signup-form">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" class="input-control input is-normal">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" class="input-control input is-normal"><br>
 
-    <div class="nav-bar">
-      <nav>
-        <ul>
-          <li class="dropdown">
-            <a href="#tickets" class="dropbtn">Tickets</a>
-            <div class="dropdown-content">
-              <a href="#"> Orders</a>
-            </div>
-          </li>
+                                <label for="email">Phone #:</label>
+                                <input type="text" class="input-control input is-normal"><br>
 
-          <li class="dropdown">
-            <a href="#sell" class="dropbtn">Sell</a>
-            <div class="dropdown-content">
-              <a href="#">My Tickets</a>
-            </div>
-          </li>
+                                <label for="email">Email Id:</label>
+                                <input type="text" class="input-control input is-normal">
 
-          <li>
-            <a href="#contact" id="contact-link">Contact Us</a>
-            <div class="dropdown-content">
-              <form>
-                <div>
-                  <input type="text" class="input-control  input is-normal" id="Name" placeholder="Name" required>
+                                <label for="username">Password</label>
+                                <input type="text" class="input-control input is-normal"><br>
+
+                                <button class="button is-link">submit</button>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="nv-dropdown">
+                        <a href="#login">Login</a>
+                        <div class="nv-dropdown-content">
+                            <label for="email"></label>
+                            <input type="text" class="input-control input is-normal" placeholder="Email">
+
+                            <label for="password"></label>
+                            <input type="text" class="input-control input is-normal" placeholder="Password"><br>
+
+                            <button class="button is-success">Login</button>
+                            Remember Me<input type="checkbox">
+                            <p class="content has-text-center is-small">Forgot Your Password</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="navbar-2">
+            <nav>
+                <li>
+                    <div class="dropdown">
+                        <a href="#tickets">Tickets</a>
+                        <div class="dropdown-content">
+                            <a href="#">Purchase</a>
+                        </div>
+                    </div>
+                </li>
+                <div class="dropdown">
+                <li>
+                    <a href="#about-us">About Us</a>
+                </li>
                 </div>
-              </form>
+
+                <div class="dropdown">
+                <li>
+                    <a href="#contact-us">Contact Us</a>
+                </li>
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <div class="box">
+                <input type="text" id="date" class="input-control input is-normal has-left-border" placeholder="Date">
+                <input type="text" id="search-location" class="input-control input is-normal has-right-border" placeholder="Location">
+                <input type="text" id="distance" class="input-control input is-normal" placeholder="Distance">
+                <input type="text" id="genre" class="input-control input is-normal" placeholder="Genre">
+                <button class="button is-link">submit</button>
             </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
+        </div>
 
-    <div class="box">
-      <form>
-        <div class="form-group">
-          <div class="input-group">
-            <label for="date" class="form-label"></label>
-            <div class="input-wrapper">
-              <input type="text" class="input-control  input is-normal" id="date" placeholder="Date" required>
-              <span class="icon is-small is-left">
-                <i class="fi fi-ss-calendar"></i>
-              </span>
+        <div class="footer">
+            <div class="content-text content has-text-left">
+                <h4>Feedback</h4>
+                <div id="feedback-dropdown">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Text input">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Username</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </div>
+                        <p class="help is-success">This username is available</p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger">This email is invalid</p>
+                    </div>
+
+
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Textarea"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                I agree to the <a href="#">terms and conditions</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" name="question">
+                                Yes
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="question">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link">Submit</button>
+                        </div>
+                        <div class="control">
+                            <button class="button is-link is-light">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="content has-text-left">
+                    <h4>About Us</h4>
+                    <p class="desc">
+                        Description of our company.
+                    </p>
+                </div>
+
+
+                <div class="content has-text-left">
+                    <h4 class=>Contact Us</h4>
+                    <p class="desc">Email: </p>
+                    <p class="desc">Phone #:</p>
+                    <p class="desc">Address: </p>
+                </div>
+
             </div>
-          </div>
-        </div>
-        <div class="input-group">
-          <label for="search-location" class="form-label"></label>
-          <div class="input-wrapper">
-            <input type="text" class="input-control input is-normal" id="search-location"
-              placeholder="Location" required>
-            <span class="icon is-small is-left">
-              <i class="fi fi-rr-home-location"></i>
-            </span>
+            <div class="content has-text-right">
+                <div>
+                    <p>
+                        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a> is used for CSS
+                        styling.
+                    </p>
+                </div>
+            </div>
 
-          </div>
-        </div>
 
-        <div class="input-group">
-          <label for="distance" class="form-label"></label>
-          <div class="input-wrapper">
-            <input type="text" class="input-control input is-normal" id="distance" placeholder="Distance" required>
-            <span class="icon is-small is-left">
-              <i class="fi fi-rs-cars"></i>
-            </span>
-          </div>
         </div>
-
-        <div class="input-group">
-          <label for="genre" class="form-label"></label>
-          <div class="input-wrapper">
-            <input type="text" class="input-control input is-normal" id="genre" placeholder="Genre" required>
-            <img class="img-style" src="./images/icons/pop" alt="genre icon" width="30" height="30">
-          </div>
-        </div>
-      </form>
-      <button type="submit">Search</button>
-      <img src="./images/learning" alt="search icon">
-
     </div>
+    <div id="results"></div>
 
-
-  </div>
-
-  <script src="./assets/JavaScript/script.js"></script>
+    <script src="./assets/JavaScript/testscript.js"></script>
+    <script src="./assets/js/mainSpotify.js"></script>
+    <script src="./assets/js/mainTicketmaster.js"></script>
 </body>
 
 </html>
