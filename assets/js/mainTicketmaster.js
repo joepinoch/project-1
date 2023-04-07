@@ -4,6 +4,7 @@
 $(document).ready(function () {
   $("button").on("click", function (event) {
     event.preventDefault();
+    document.querySelector('#results').innerHTML = ""; /// any new submit will clear the page and bring new results
     var Searchlocation = document.getElementById("search-location").value;
     console.log(Searchlocation);
     var genre = document.getElementById("genre").value;
