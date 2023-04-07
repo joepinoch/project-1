@@ -1,0 +1,132 @@
+/* Reset all styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Header styles */
+div h1 {
+    background: linear-gradient(to right, rgb(185, 61, 204), rgb(49, 49, 160));
+    font-size: 58px;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 10px 11px 12px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: linear-gradient();
+}
+
+div h2 {
+    background-color: rgb(212, 157, 157);
+    color: black;
+    font-size: 36px;
+    text-align: left;
+}
+
+.navbar-1 ul {
+    float: left;
+    font-size: 20px;
+
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+
+}
+
+.navbar-2 {
+    list-style: none;
+    color: #333;
+    float: right;
+    font-size: 20px;
+
+}
+
+.navbar-1 nav {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+
+}
+
+.navbar-2 nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 35px;
+}
+
+.dropdown a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+
+.dropdown-content {
+    display: none;
+}
+
+
+.nv-dropdown a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.nv-dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+#feedback-dropdown {
+    display: none;
+    /* position: absolute; */
+}
+
+.content-text {
+    font-size: 10px;
+}
+
+.desc {
+    display: none;
+}
+
+/* Footer styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Form styles */
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 75%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../../images/—Pngtree—3d\ abstract\ electric\ guitar\ and_6785740.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.input-control {
+    width: 20%;
+    border: 1 solid black;
+}
+
+input {}
