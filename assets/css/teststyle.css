@@ -81,12 +81,12 @@ div h2 {
 
 .nv-dropdown-content {
     display: none;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 #feedback-dropdown {
     display: none;
-    /* position: absolute; */
+    /* position: absolute;*/
 }
 
 .content-text {
@@ -98,35 +98,48 @@ div h2 {
 }
 
 /* Footer styles */
-.footer {
+/*.footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
     align-items: flex-end;
-}
+}*/
 
 /* Form styles */
 .box {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    position: absolute;
+    align-items: center;
+    /* position: absolute; */
     width: 75%;
     height: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%);*/
     background-image: url(../../images/—Pngtree—3d\ abstract\ electric\ guitar\ and_6785740.png);
     background-size: contain;
     background-repeat: no-repeat;
+
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the inner box */
+
 
 .input-control {
     width: 20%;
     border: 1 solid black;
 }
 
-input {}
+
+#results img {
+    width: 200px;
+    height: 200px;
+}
