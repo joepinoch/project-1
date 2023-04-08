@@ -58,7 +58,7 @@ nav a:hover {
   border: 1px solid #ccc;
   display: none;
   min-width: 160px;
- /* position: absolute;*/
+  position: absolute;
   z-index: 1;
 }
 
@@ -79,12 +79,12 @@ nav a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
- /* position:relative; 
+  position:absolute; 
   width: 75%;
   height: 50%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)*/;
+  transform: translate(-50%, -50%);
 }
 
 /* .form-group {
@@ -150,4 +150,9 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+#results img {
+  width: 200px;
+  height: 200px;
 }
