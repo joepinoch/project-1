@@ -22,54 +22,58 @@ $(document).ready(function () {
         console.log(json);
 
         //for (var i = 0; i <= json._embedded.events.length; i++) {
-          // var resultsEventName = json._embedded.events[i].name;
-          // console.log(resultsEventName);
-          //results = [event name, event date, venue name, ticketmaster link, spotify link]
-          //resultsEventName[i] = [json._embedded.events[i].name.value];
-          //json._embedded.events[i].dates.start.localDate, json._embedded.events[i]._embedded.venues[0].name, json._embedded.events[i].url, "Insert Spotify here"];
-          //console.log(json);
+        // var resultsEventName = json._embedded.events[i].name;
+        // console.log(resultsEventName);
+        //results = [event name, event date, venue name, ticketmaster link, spotify link]
+        //resultsEventName[i] = [json._embedded.events[i].name.value];
+        //json._embedded.events[i].dates.start.localDate, json._embedded.events[i]._embedded.venues[0].name, json._embedded.events[i].url, "Insert Spotify here"];
+        //console.log(json);
 
-          var events = json._embedded.events;
+        var events = json._embedded.events;
 
-          for (var i = 0; i < events.length; i++) {
-            console.log(events[i]);
-            var titleEl = document.createElement('h2');
-            var moreInfoEl = document.createElement('a');
-            var imageEl = document.createElement('img');
+        for (var i = 0; i < events.length; i++) {
+          console.log(events[i]);
+          var divnew = document.createElement('div');
+          var titleEl = document.createElement('h2');
+          var moreInfoEl = document.createElement('a');
+          var imageEl = document.createElement('img');
 
-            titleEl.textContent = events[i].name;
-            moreInfoEl.textContent = 'More info >';
+          divnew.classList.add('card');
+          titleEl.textContent = events[i].name;
+          moreInfoEl.textContent = 'More info >';
 
-            moreInfoEl.setAttribute('href', events[i].url);
-            moreInfoEl.setAttribute('target', '_blank');
+          moreInfoEl.setAttribute('href', events[i].url);
+          moreInfoEl.setAttribute('target', '_blank');
 
-            imageEl.setAttribute('src', events[i].images[0].url);
+          imageEl.setAttribute('src', events[i].images[0].url);
 
-           
+          divnew.appendChild(titleEl);
+          divnew.appendChild(moreInfoEl);
+          divnew.appendChild(imageEl);
 
-            document.querySelector('#results').appendChild(titleEl);
-            document.querySelector('#results').appendChild(moreInfoEl);
-            document.querySelector('#results').appendChild(imageEl);
+          document.querySelector('#results').appendChild(divnew);
 
-            for (var j=0; j<events.length; j++) {
-              var artist = [];
-              artist[j] = events[i].name;
-              
-            }
+
+
+          for (var j = 0; j < events.length; j++) {
+            var artist = [];
+            artist[j] = events[i].name;
+
           }
-          
-          console.log(artist);
-          //let artist = new Array(json._embedded.events.length);
-          // for (let i = 0; i <= json._embedded.events.length; i++) {
-          //   var artist = json._embedded.events[i]._embedded.attractions[0].artist || "No Artist";
-          //   //if (json._embedded.events[i]._embedded.attractions[i]=false) {
-          //   // artist[i]="Artist Name not Available";
-          //   // } else {
-          //   // artist[i] = json._embedded.events[i]._embedded.attractions[i]; 
-          //   //}
+        }
 
-          // }
-          // console.log(artist);
+        console.log(artist);
+        //let artist = new Array(json._embedded.events.length);
+        // for (let i = 0; i <= json._embedded.events.length; i++) {
+        //   var artist = json._embedded.events[i]._embedded.attractions[0].artist || "No Artist";
+        //   //if (json._embedded.events[i]._embedded.attractions[i]=false) {
+        //   // artist[i]="Artist Name not Available";
+        //   // } else {
+        //   // artist[i] = json._embedded.events[i]._embedded.attractions[i]; 
+        //   //}
+
+        // }
+        // console.log(artist);
 
         //}
       },
