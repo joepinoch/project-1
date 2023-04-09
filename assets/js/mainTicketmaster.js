@@ -19,6 +19,7 @@ $(document).ready(function () {
       async: true,
       dataType: "json",
       success: function (json) {
+        console.log("HERE -------------     ", json);
         console.log(json);
 
         //for (var i = 0; i <= json._embedded.events.length; i++) {
@@ -32,7 +33,6 @@ $(document).ready(function () {
         var events = json._embedded.events;
 
         for (var i = 0; i < events.length; i++) {
-          console.log(events[i]);
           var divnew = document.createElement('div');
           var titleEl = document.createElement('h2');
           var moreInfoEl = document.createElement('a');
@@ -52,17 +52,18 @@ $(document).ready(function () {
           divnew.appendChild(imageEl);
           document.querySelector('#results').appendChild(divnew);
 
-
           // get artist names
           var artist = [];
-          for (var j = 0; j < events[i]._embedded.attractions.length; j++) {
-            artist.push(events[i]._embedded.attractions[j].name);
+          var attractions = events[i]._embedded.attractions;
+          if(attractions && attractions.length > 0){
+            for (var j = 0; j < attractions.length; j++) {
+              artist.push(events[i]._embedded.attractions[j].name);
+            }
+            console.log(artist);
           }
-          console.log(artist);
         }
-
         // hide .box and show #results
-        $('.box').hide();
+        $('.main-card').hide();
         $('#results').show();
       }
     });
