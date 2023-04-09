@@ -19,6 +19,7 @@ $(document).ready(function () {
       async: true,
       dataType: "json",
       success: function (json) {
+        console.log("HERE -------------     ", json);
         console.log(json);
 
         //for (var i = 0; i <= json._embedded.events.length; i++) {
@@ -32,12 +33,11 @@ $(document).ready(function () {
         var events = json._embedded.events;
 
         for (var i = 0; i < events.length; i++) {
-          console.log(events[i]);
           var divnew = document.createElement('div');
           var titleEl = document.createElement('h2');
           var moreInfoEl = document.createElement('a');
           var imageEl = document.createElement('img');
-
+          // add classes and attributes to event card elements
           divnew.classList.add('card');
           titleEl.textContent = events[i].name;
           moreInfoEl.textContent = 'More info >';
@@ -46,41 +46,51 @@ $(document).ready(function () {
           moreInfoEl.setAttribute('target', '_blank');
 
           imageEl.setAttribute('src', events[i].images[0].url);
-
+          // append event card elements to card container
           divnew.appendChild(titleEl);
           divnew.appendChild(moreInfoEl);
           divnew.appendChild(imageEl);
-
           document.querySelector('#results').appendChild(divnew);
 
-
-
-          for (var j = 0; j < events.length; j++) {
-            var artist = [];
-            artist[j] = events[i].name;
-
+          // get artist names
+          var artist = [];
+          var attractions = events[i]._embedded.attractions;
+          if(attractions && attractions.length > 0){
+            for (var j = 0; j < attractions.length; j++) {
+              artist.push(events[i]._embedded.attractions[j].name);
+            }
+            console.log(artist);
           }
         }
-
-        console.log(artist);
-        //let artist = new Array(json._embedded.events.length);
-        // for (let i = 0; i <= json._embedded.events.length; i++) {
-        //   var artist = json._embedded.events[i]._embedded.attractions[0].artist || "No Artist";
-        //   //if (json._embedded.events[i]._embedded.attractions[i]=false) {
-        //   // artist[i]="Artist Name not Available";
-        //   // } else {
-        //   // artist[i] = json._embedded.events[i]._embedded.attractions[i]; 
-        //   //}
-
-        // }
-        // console.log(artist);
-
-        //}
-      },
-      error: function (xhr, status, err) {
-        console.log("it no work")
-        // This time, we do not end up here!
+        // hide .box and show #results
+        $('.main-card').hide();
+        $('#results').show();
       }
     });
   });
 });
+
+      //   }
+
+      //   console.log(artist);
+      //   //let artist = new Array(json._embedded.events.length);
+      //   // for (let i = 0; i <= json._embedded.events.length; i++) {
+      //   //   var artist = json._embedded.events[i]._embedded.attractions[0].artist || "No Artist";
+      //   //   //if (json._embedded.events[i]._embedded.attractions[i]=false) {
+      //   //   // artist[i]="Artist Name not Available";
+      //   //   // } else {
+      //   //   // artist[i] = json._embedded.events[i]._embedded.attractions[i]; 
+      //   //   //}
+
+      //   // }
+      //   // console.log(artist);
+
+      //   //}
+      // },
+// error: function (xhr, status, err) {
+//   console.log("it no work")
+//   // This time, we do not end up here!
+// }
+//     });
+//   });
+// });
