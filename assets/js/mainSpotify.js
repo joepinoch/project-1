@@ -81,7 +81,7 @@ async function getTracksByGenre(genre) {
   
   displayTracksByGenre("rock"); 
   
-  // need to change this because this is what changes the songs but at least content shwos up
+  // need to change this because this is what changes the songs but at least content shows up
   const genres = ["pop", "hip hop", "country", "jazz", "classical"];
   let index = 1;
   setInterval(() => {
