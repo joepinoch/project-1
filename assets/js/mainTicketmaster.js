@@ -12,15 +12,6 @@ $(document).ready(function () {
     var date = document.getElementById("date").value;
     console.log(date);
     var distance = document.getElementById("distance").value;
-
-        // Validate date format and convert to UTC timezone
-        var dateObj = new Date(date);
-        if (isNaN(dateObj.getTime())) {
-          console.log('Invalid date format.');
-          return;
-        }
-        var utcDate = dateObj.toISOString().split('T')[0];
-    
     exampleSpotifyCall(genre);
     $.ajax({
       type: "GET",
@@ -38,7 +29,7 @@ $(document).ready(function () {
         //resultsEventName[i] = [json._embedded.events[i].name.value];
         //json._embedded.events[i].dates.start.localDate, json._embedded.events[i]._embedded.venues[0].name, json._embedded.events[i].url, "Insert Spotify here"];
         //console.log(json);
-        if (json._embedded && json._embedded.events)
+
         var events = json._embedded.events;
 
         for (var i = 0; i < events.length; i++) {
