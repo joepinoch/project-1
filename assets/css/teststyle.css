@@ -1,4 +1,6 @@
 /* Reset all styles */
+
+@media only screen and (max-width: 768px) {
 * {
     margin: 0;
     padding: 0;
@@ -53,10 +55,6 @@ div h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    background-image: url(../../images/—Pngtree—3d\ abstract\ electric\ guitar\ and_6785740.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;  
 }
 
 .box .field {
@@ -132,4 +130,12 @@ div h2 {
     max-width: 100%;
     height: auto;
   }
+/*   
+  #results {
+    display: none;
+  }
   
+  #results .card-content {
+    padding: 20px;
+  } */
+}
