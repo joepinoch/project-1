@@ -2,7 +2,7 @@
 
 
 $(document).ready(function () {
-  $("button").on("click", function () {
+  $("button").on("click", function (event) {
     event.preventDefault();
     var Searchlocation = document.getElementById("search-location").value;
     console.log(Searchlocation);
