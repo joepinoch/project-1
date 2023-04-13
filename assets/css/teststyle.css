@@ -1,138 +1,148 @@
-/* Reset all styles */
-@media (min-width: 768px){
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 }
-.hero-body{
-    margin-left: 10px;
+
+.hero-body {
+  margin-left: 10px;
 }
+
 /* Header styles */
 div h1 {
-    font-size: 60px;
-    font-weight: bolder;
-    text-align: center;
+  font-size: 60px;
+  font-weight: bolder;
+  text-align: center;
 }
 
 div h2 {
-    color: black;
-    font-size: 36px;
-    text-align: center;
+  color: black;
+  font-size: 36px;
+  text-align: center;
 }
 
 .main-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 30px;
-    width: 100%;
-    height: 75%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    background-image: url(../../images/—Pngtree—3d\ abstract\ electric\ guitar\ and_6785740.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  height: 75%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  background-image: url(../../images/—Pngtree—3d\ abstract\ electric\ guitar\ and_6785740.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-#results{
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 30px;
-    width: 100%;
-    height: 75%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  
+
+#results {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  height: 75%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
 }
 
 .box .field {
-    display: flex;
-    flex-direction: row;
-    margin-top: 25%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 25%;
 }
 
 .no-right-border {
 
-    border-right: none;
+  border-right: none;
 }
 
 
 #feedback-dropdown {
-    display: none;
-    /* position: absolute; */
+  display: none;
+  /* position: absolute; */
 }
 
 .content-text {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .desc {
-    display: none;
+  display: none;
 }
 
+#signup-form {
+  display: none;
+}
+
+#login-form {
+  display: none;
+}
 
 /* Footer styles */
 .footer {
-    position: relative;
-    bottom: 0;
-    left: 0; 
-    width: 100%;
-    /* margin-left: 30px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* margin-left: 30px;
     margin-right: 30px; */
-    margin-top: 20px;
-    max-height: 30px;
- }
- .content-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
- }
+  margin-top: 20px;
+  max-height: 30px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
 
- .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    background-image: url(../../images/R\ \(1\).jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  background-image: url(../../images/R\ \(1\).jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  .card h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .card a {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-  }
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*   
   #results {
     display: none;
@@ -141,4 +151,10 @@ div h2 {
   #results .card-content {
     padding: 20px;
   } */
+
+@media (min-width: 1025px) {
+  #feedback-dropdown #signup-form #login-form {
+    display: none;
+  }
+
 }
