@@ -143,14 +143,16 @@ div h2 {
   height: auto;
 }
 
-/*   
-  #results {
-    display: none;
-  }
-  
-  #results .card-content {
-    padding: 20px;
-  } */
+#signup{
+  display: none;
+
+}
+#login-form{
+  display: none;
+
+}
+
+
 
 @media (min-width: 1025px) {
   #feedback-dropdown #signup-form #login-form {
