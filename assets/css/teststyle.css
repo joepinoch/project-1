@@ -1,4 +1,5 @@
 /* Reset all styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -53,10 +54,7 @@ div h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    background-image: url(../../images/—Pngtree—3d\ abstract\ electric\ guitar\ and_6785740.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;  
+
 }
 
 .box .field {
@@ -114,7 +112,10 @@ div h2 {
     border: 1px solid #ddd;
     border-radius: 0.5rem;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    background-color: linear-gradiant (to right, rgb(185, 61, 204), rgb(49, 49, 160));
+    background-image: url(../../images/R\ \(1\).jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
   }
 
   .card h2 {
@@ -132,4 +133,4 @@ div h2 {
     max-width: 100%;
     height: auto;
   }
-  
+
