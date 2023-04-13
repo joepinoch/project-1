@@ -57,7 +57,37 @@ getToken()
 setInterval(getToken, 3600000)
 
 
-
+async function getTracksByGenre(genre) {
+    const response = await fetch(`https://api.spotify.com/v1/search?query=genre%3A${genre}&type=track&market=US&locale=en-US%2Cen%3Bq%3D0.9&offset=0&limit=10`, {
+      method: "GET",
+      headers: {
+        "Authorization": `Bearer ${token}`
+      }
+    });
+    let res = await response.json();
+    return res.tracks.items;
+  }
+  
+  async function displayTracksByGenre(genre) {
+    const trackList = document.getElementById("track-list");
+    trackList.innerHTML = ""; // Clear previous track list
+    const tracks = await getTracksByGenre(genre);
+    tracks.forEach((track) => {
+      const li = document.createElement("li");
+      li.innerText = `${track.name} by ${track.artists[0].name}`;
+      trackList.appendChild(li);
+    });
+  }
+  
+  displayTracksByGenre("rock"); 
+  
+  // need to change this because this is what changes the songs but at least content shwos up
+  const genres = ["pop", "hip hop", "country", "jazz", "classical"];
+  let index = 1;
+  setInterval(() => {
+    displayTracksByGenre(genres[index]);
+    index = (index + 1) % genres.length;
+  }, 30000);
 
 async function exampleSpotifyCall(genre) {
     const response = await fetch(`https://api.spotify.com/v1/search?query=genre%3A${genre}&type=track&market=US&locale=en-US%2Cen%3Bq%3D0.9&offset=0&limit=10`, {
